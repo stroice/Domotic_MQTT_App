@@ -8,3 +8,5 @@ Important remarks:
 -Insert in line 21 of file AndroidManifest.xml the google key used for google maps.
 
 -Insert in line 127 of file MainActivity.java the IP direction used to connect mqtt.
+
+-In case the MQTT network is not detected, the App may crush.
