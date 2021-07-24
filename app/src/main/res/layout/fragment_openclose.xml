@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controlador.open_close">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+    <!-- Controles de climatizador y caldera, carta 1-->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/carta1_luz"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            //Título de la carta
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Control de la luz"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textSize="30dp"/>
+
+            //Switches de control
+            <Switch
+
+                android:id="@+id/Sw_luz_on"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Luz ON"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/md_blue_grey_600"
+                />
+
+            <Switch
+                android:id="@+id/Sw_luz_auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Modo auto"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/md_blue_grey_600"
+                android:layout_below="@+id/Sw_luz_on"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/carta2_luz"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_below="@+id/carta1_luz">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            //Título de la carta
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Control de persiana"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textSize="30dp"/>
+
+            //Switches de control
+            <Switch
+
+                android:id="@+id/Sw_persiana_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Subir persiana"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/md_blue_grey_600"
+                />
+
+            <Switch
+                android:id="@+id/Sw_persiana_down"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Bajar persiana"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/md_blue_grey_600"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Estado: CERRADO"
+                    android:id="@+id/tx_persiana"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/md_blue_grey_600">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/carta3_consumo"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_below="@+id/carta2_luz">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                //Título de la carta
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Consumo"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textSize="30dp"/>
+
+                //Switches de control
+                <Switch
+
+                    android:id="@+id/Sw_consumo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="Activar sensado de consumo"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/md_blue_grey_600"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Consumo: 0kWh"
+                        android:id="@+id/comsumo_texto"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/md_blue_grey_600">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

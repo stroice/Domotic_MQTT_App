@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controlador.air_quality">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Controles de climatizador y caldera, carta 1-->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/carta1_Warnings"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    //Título de la carta
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Estado del edificio:"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"
+                        android:textAlignment="center"
+                        android:textSize="30dp"/>
+
+                    <TextView
+                        android:id="@+id/label_acceso"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Llamadas al timbre atendidas"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/md_blue_grey_600">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/label_ventana"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Estado de las ventanas: ABIERTAS"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/md_blue_grey_600">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/label_auto_warn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Estado climatizador auto: OFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/md_blue_grey_600">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/label_cale_warn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Estado calefacción: OFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/md_blue_grey_600">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/label_aire_warn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Estado aire acondicionado: OFF"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/md_blue_grey_600">
+                    </TextView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/carta2_Warnings"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="10dp"
+                android:layout_below="@+id/carta1_Warnings">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    //Título de la carta
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Warnings and problems"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"
+                        android:textAlignment="center"
+                        android:textSize="30dp"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Co2 level: OK"
+                            android:id="@+id/label_co2"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/md_blue_grey_600">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Warning: OK"
+                            android:id="@+id/label_warn"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/md_blue_grey_600">
+
+                        </TextView>
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
